@@ -11,3 +11,12 @@ def list_prime_numbers():
     return [number for number in range (101) if is_prime_number(number)]
 for x in list_prime_numbers():
     print(x, end = " ")
+print()
+# Подсчёт гласных
+list_vowels = ['а', 'о', 'у', 'э', 'ы', 'я', 'ю', 'е', 'ё', 'и']
+counter = 0
+string = str(input())
+for i in range (len (string)):
+    if string[i] in list_vowels:
+        counter += 1
+print(counter)
