@@ -13,14 +13,14 @@ for x in list_prime_numbers():
     print(x, end = " ")
 print()
 
-# # Подсчёт гласных
-# list_vowels = ['а', 'о', 'у', 'э', 'ы', 'я', 'ю', 'е', 'ё', 'и']
-# counter = 0
-# string = str(input())
-# for i in range (len (string)):
-#     if string[i] in list_vowels:
-#         counter += 1
-# print(counter)
+# Подсчёт гласных
+list_vowels = ['а', 'о', 'у', 'э', 'ы', 'я', 'ю', 'е', 'ё', 'и']
+counter = 0
+string = str(input())
+for i in range (len (string)):
+    if string[i] in list_vowels:
+        counter += 1
+print(counter)
 
 # Таблица умножения
 def multiplication_table(size):
@@ -41,19 +41,19 @@ multiplication_table(20)
 def binary_search(arr, x):
     left = 0
     right = len(arr) - 1
-    mid = 0
+    middle = 0
     while left <= right:
-        mid = (right + left) // 2
-        if arr[mid] < x:
-            left = mid + 1
-        elif arr[mid] > x:
-            right = mid - 1
+        middle = (right + left) // 2
+        if arr[middle] < x:
+            left = middle + 1
+        elif arr[middle] > x:
+            right = middle - 1
         else:
-            return mid
+            return middle
     return -1
 
 arr = [ 0, 1, 3, 3, 12 ]
-x = 13
+x = 3
 result = binary_search(arr, x)
 if result != -1:
     print(f"Элемент {x} найден с индексом:", str(result))
