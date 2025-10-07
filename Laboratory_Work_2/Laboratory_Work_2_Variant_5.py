@@ -35,7 +35,7 @@ def multiplication_table(size):
         for j in range(1, size + 1):
             print(f"{i*j:4}", end = "")
         print()
-multiplication_table(20)
+multiplication_table(10)
 
 # Бинарный поиск
 def binary_search(arr, x):
@@ -59,3 +59,10 @@ if result != -1:
     print(f"Элемент {x} найден с индексом:", str(result))
 else:
     print(f"Элемент {x} не найден")
+
+# Создание и импортирование модуля
+import country_guess
+country_guess.show_countries()
+country_guess.play()
+
+
