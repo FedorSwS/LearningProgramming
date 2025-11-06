@@ -30,3 +30,15 @@ class EnhancedList(list):
         return self.sum() / len(self) if self else 0
     def unique(self):
         return list(set(self))
+
+class Temperature:
+    def __init__(self, celsius=0):
+        self._celsius = celsius
+    @property
+    def celsius(self):
+        return self._celsius
+    @celsius.setter
+    def celsius(self, value):
+        if value < -273:
+            raise ValueError("Температура не может быть ниже абсолютного нуля")
+        self._celsius = value
