@@ -22,3 +22,11 @@ class Vector:
         return Vector(self.x + other.x, self.y + other.y)
     def __str__(self):
         return f"Vector({self.x},{self.y})"
+
+class EnhancedList(list):
+    def sum(self):
+        return sum(self)
+    def average(self):
+        return self.sum() / len(self) if self else 0
+    def unique(self):
+        return list(set(self))
