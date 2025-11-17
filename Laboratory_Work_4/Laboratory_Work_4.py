@@ -32,3 +32,28 @@ def round_list_result(digits = 2):
 def list_for_round():
     return [3.159, 2.7128, 1.41, 0.577212]
 print(list_for_round())
+
+import csv
+
+def read_and_process_csv(filename):
+    with open(filename, encoding='utf-8') as f:
+        reader = csv.reader(f)
+        rows = list(reader)
+    headers = rows[0]
+    data_rows = rows[1:]
+    return headers, data_rows
+headers, data_rows = read_and_process_csv('C:/Users/SoNiC/Desktop/LearningProgramming/Laboratory_Work_4/lr4.csv')
+high_achievers = list(map(
+    lambda row: dict(zip(headers, row)),
+    filter(lambda row: float(row[1]) >= 4.0, data_rows)
+))
+third_course = list(map(
+    lambda row: dict(zip(headers, row)),
+    filter(lambda row: row[2] == '3', data_rows)
+))
+print("     Студенты с оценкой >= 4.0:")
+for s in high_achievers:
+    print(s)
+print("\n     Студенты на 3 курсе:")
+for s in third_course:
+    print(s)
