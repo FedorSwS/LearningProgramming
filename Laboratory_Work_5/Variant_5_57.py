@@ -12,11 +12,11 @@ def calculate_sum():
         label_sum_result.config(text=f"{result}")
     except ValueError:
         messagebox.showerror("Ошибка", "Введите числа")
- 
+
 def exit_app():
     if messagebox.askokcancel("Выход", "Вы действительно хотите выйти?"):
         root.destroy()
-
+        
 root = tk.Tk()
 root.title("ЛР №5")
 root.geometry("400x200")
