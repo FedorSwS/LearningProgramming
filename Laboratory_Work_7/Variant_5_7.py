@@ -30,6 +30,7 @@ def create_tables():
     cur.execute("INSERT OR IGNORE INTO students (id, fio, course, group_id) VALUES (2, 'Евстигнеев Ф.А.', 3, 2)")
     cur.execute("INSERT OR IGNORE INTO students (id, fio, course, group_id) VALUES (3, 'Сидоров И.А.', 4, 3)")
     cur.execute("INSERT OR IGNORE INTO students (id, fio, course, group_id) VALUES (4, 'Лупин С.С.', 1, 4)")
+    cur.execute("INSERT OR IGNORE INTO students (id, fio, course, group_id) VALUES (5, 'Иванов И.И.', 3, 2)")
     conn.commit()
     conn.close()
 
